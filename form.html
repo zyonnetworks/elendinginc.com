@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bank</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css"/>
+    <link href="css/icon.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--<div class="top-bar">
+      <div class="container">
+        <p><strong>Opening Hours:</strong>  Mon-Fri   8.30 am - 6.30pm </p>
+        <ul class="pull-right">
+          <li><a href="#">SUPPORT</a></li>
+          <li><a href="#">PRIVACY</a></li>
+        </ul>
+      </div>
+    </div>-->
+    <header>
+      <div class="container">
+        <a href="#" class="logo">eLending Capital</a>
+        <div class="pull-right">
+          <div class="contact-box">
+            <span class="circle-icon"><span class="ion-ios-telephone"></span></span>
+            <p>858-345-6267</p>
+            <p class="small-text">elendingcapital@gmail.com</p>
+          </div>
+          <div class="contact-box">
+            <span class="circle-icon"><span class="ion-navigate"></span></span>
+            <p>861 6th Avenue,</p>
+            <p class="small-text">Suite 612, 92101 San Diego, CA</p>
+          </div>
+          <ul class="social-media-top">
+            <li><a href="#"><span class="socicon-facebook"></span></a></li>
+            <li><a href="#"><span class="socicon-twitter"></span></a></li>
+            <li><a href="#"><span class="socicon-linkedin"></span></a></li>
+            <li><a href="#"><span class="socicon-googleplus"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="container">
+        <div class="menu subpage-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#accepted-assets">ASSETS WE ACCEPT</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+          <a href="#" class="consultation-button pull-right">GET A FREE CONSULTATION</a>
+        </div>
+    </div>
+    <div class="subpage-header">
+      <h1>HOW TO APPLY</h1>
+    </div>
+      <div class="container form-container">
+        <div class="center">
+          <h2>APPLICATION FORM</h2>
+        </center>
+        <form type="submit" id="formLead" method="post" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+              <label>YOUR NAME:
+                <input type="text" id="name" name="name" />
+              </label>
+              <label>EMAIL:
+                <input type="text" id="email" name="email" />
+              </label>
+              <label>AMOUNT YOU WISH TO BORROW:
+                <input type="text" name="requestedLoanAmount" id="requestedLoanAmount" />
+              </label>
+              <label>UPLOAD PHOTOGRAPHS (AT LEAST 3 PHOTOS OF 3 DIFFERENT ANGLES)
+                <input type="file" id="photos" name="photos" class="nice" onchange="previewFiles()" multiple />
+              </label>
+
+              <div id="preview"></div>
+            </div>
+
+            <div class="col-sm-5">
+              <label>PHONE:
+                <input type="text" id="phone" name="phone" />
+              </label>
+
+              <label>SELECT:</label>
+              <select name="whatIsThisLoanFor">
+                <option value="Refinance">Refinance</option>
+                <option value="Aqcuisition">Aqcuisition</option>
+              </select>
+
+              <label>ORIGINAL PACKAGING AVAILABLE
+                <div class="radio-box">
+                  <input type="radio" name="originalPackaging" id="originalPackaging" value="true" class="css-checkbox" checked>
+                  <label for="radio1" class="css-label radGroup1">YES</label>
+
+                  <input type="radio" name="originalPackaging" id="originalPackaging" value="false" class="css-checkbox">
+                  <label for="radio2" class="css-label radGroup1">NO</label>
+                </div>
+              </label>
+
+              <label>BRAND (if applicable)
+                <input type="text" name="assetBrand" id="assetBrand" />
+              </label>
+
+              <label>YEAR PURCHASED
+                <input type="text" name="yearPurchased" id="yearPurchased" />
+              </label>
+            </div>
+            <div class="col-sm-12 center">
+              <button type="submit">APPLY NOW</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <a href="#" class="logo-footer">eLending Capital</a>
+          <p><span class="capitalized">E</span>LENDING lends money against your valuables with no credit checks, no income verification, and no tax returns.  Unleash the power of your equity now.  Safe and Discreet.</p>
+        </div>
+        <div class="col-sm-3">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Sales Advance Loans</a></li>
+            <li><a href="#">Bridge Loans </a></li>
+            <li><a href="#">Term Loans</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Assets We Accept</h3>
+          <ul>
+            <li><a href="#">Jewelry & Diamonds</a></li>
+            <li><a href="#">Luxury Watches</a></li>
+            <li><a href="#">Fine Arts & Antiques</a></li>
+            <li><a href="#">Luxury Cars</a></li>
+            <li><a href="#">Gold & Precious Metals</a></li>
+            <li><a href="#">Luxury Handbags</a></li>
+            <li><a href="#">Fine Wine</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Contact Us</h3>
+          <p>861 6th Avenue, <br />
+          Suite 612, 92101 San Diego, CA <br /><br />
+
+          E-Mail: Elendingcapital@gmail.com <br /><br />
+
+          CALL US - 858-345-6267 <br />
+          Mon-Fri: 8:30am - 6:00pm <br /><br />
+
+          VISIT US <br />
+          Mon-Fri: 8:30am - 6:00pm</p>
+        </div>
+      </div>
+      <div class="col-sm-12 footer-content">
+        <p class="pull-left">Copyright 2016 - Elending Capital</p>
+        <ul class="pull-right">
+          <li><a href="#"><span class="socicon-facebook"></span></a></li>
+          <li><a href="#"><span class="socicon-twitter"></span></a></li>
+          <li><a href="#"><span class="socicon-linkedin"></span></a></li>
+          <li><a href="#"><span class="socicon-youtube"></span></a></li>
+          <li><a href="#"><span class="socicon-googleplus"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nicefileinput.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script type="text/javascript">
+    function getFormData($form){
+      var unindexed_array = $form.serializeArray();
+      var indexed_array = {};
+
+      $.map(unindexed_array, function(n, i){
+          if(n['value'] == "true") n['value'] = true;
+          if(n['value'] == "false") n['value'] = false;
+          indexed_array[n['name']] = n['value'];
+      });
+      return indexed_array;
+    }
+
+    function previewFiles() {
+      var preview = document.querySelector('#preview');
+      var files   = document.querySelector('input[type=file]').files;
+
+      function readAndPreview(file) {
+
+        // Make sure `file.name` matches our extensions criteria
+        if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+          var reader = new FileReader();
+
+          reader.addEventListener("load", function () {
+            var image = new Image();
+            image.height = 100;
+            image.title = file.name;
+            image.src = this.result;
+            var currentData = $( "body" ).data( "images");
+            currentData.push(this.result);
+            $( "body" ).data( "images", currentData);
+            preview.appendChild( image );
+          }, false);
+
+          reader.readAsDataURL(file);
+        }
+
+      }
+
+      if (files) {
+        [].forEach.call(files, readAndPreview);
+      }
+    }
+    
+    $(document).ready(function() {
+      $('select').niceSelect();
+      $("input[type=file]").nicefileinput({
+        label : '<img src="images/file-upload.png" />' // Spanish label
+      });
+
+      $( "body" ).data( "images", [] );
+      $('#requestedLoanAmount').mask('000,000,000,000,000', {reverse: true});
+      $('#phone').mask('(000) 000-0000', {placeholder: "(___) ___-____"});
+
+      $( "form").submit(function( event ) {
+          event.preventDefault();
+
+          var dataString = getFormData($("#formLead"));
+          dataString.leadDomain = "ecapital-lending.com";
+          dataString.leadType = "Web";
+          dataString.leadStatus = "Lead";
+          dataString.brokerOrBorrower = "Borrower";
+          dataString.assetImages = $( "body" ).data( "images");
+
+          // todo : serializeArray not returning all fields
+          var nameArray = dataString.name.split(' ');
+          dataString.firstName = nameArray[0];
+          if(typeof nameArray[1] !== "undefined") dataString.lastName = nameArray[1];
+          else dataString.lastName = nameArray[0];
+          //dataString.phone = dataString.phone.replace(/-/g, '').replace(/\(|\)/g, '').replace(/ /g, '');
+          //dataString.requestedLoanAmount = dataString.requestedLoanAmount.replace(/,/g, '');
+
+          console.log(dataString);
+
+          if(dataString.firstName && dataString.lastName && dataString.phone && dataString.email) {
+              console.log('all set');
+          } else {
+              alert('Please fill in all required fields.');
+              return false;
+          }
+
+          var postUrl = "http://crm-staging.elendinginc.com/methods/createLead";
+          //var postUrl = "http://localhost:3000/methods/createLead";
+
+          $.ajax({
+            method: "post",
+            url: postUrl,
+            data: JSON.stringify(dataString),
+            contentType: "application/json",
+            success: function (data) {
+              console.log(data); // 6
+              alert('Your information has been forwarded to our agent. Someone will be in contact with you as soon as possible.');
+            }
+          });
+        });
+    });
+    </script>
+  </body>
+</html>
