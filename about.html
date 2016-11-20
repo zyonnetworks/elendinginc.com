@@ -32,7 +32,7 @@
     </div>-->
     <header>
       <div class="container">
-        <a href="#" class="logo">eLending Capital</a>
+        <a href="index.html" class="logo">eLending Capital</a>
         <div class="pull-right">
           <div class="contact-box">
             <span class="circle-icon"><span class="ion-ios-telephone"></span></span>
@@ -51,6 +51,8 @@
             <li><a href="#"><span class="socicon-googleplus"></span></a></li>
           </ul>
         </div>
+        <a href="#" class="font-change increase-size">+</a>
+        <a href="#" class="font-change decrease-size">-</a>
       </div>
     </header>
     <div class="main-content">
@@ -73,21 +75,35 @@
       <div class="center">
         <h2>About eLending</h2>
       </div>
-      <p>eLending allows you unleash the power of your equity discreetly and quickly.  If you own luxury assets, why not have it work for you and provide you with liquidity.  If you have an immediate opportunity or you need to mitigate an unplanned situation, why not tap the value of your illiquid assets with the help of eLending. <br /><br />
+      <p>eLending helps you to unleash the power of your equity with our quick and discreet asset based lending process. If you own luxury assets, why not have them work for you and provide you with liquidity you need today. If you have an immediate opportunity or you need to mitigate an unplanned situation, eLending is here to help you tap into the value of your illiquid assets. <br /><br />
 
 eLending offers several ways to realize the value from your assets: <br /><br />
 
-With our SALES LOAN OPTION eCapital will advance a portion of your asset’s value immediately and then maximize the sales value fast. Our interests our aligned because we want to get the best possible value for you so that we can get a higher commission for our efforts. <br /><br />
+Our SALES LOAN program will advance you a portion of your asset’s value immediately while our sales experts work on finding you a suitable buyer for your asset. We align our interest to ensure both the buyers and the sellers are happy. <br /><br />
 
-Don’t want to sell your asset? With our BRIDGE LOAN program eCapital will lend you money against your asset and your asset is returned to you at the repayment of the loan.  Your assets are kept safe and insured. <br /><br />
+Don’t want to sell your asset, but you still need cash? Our BRIDGE LOAN program is set up to lend you money against your asset, while your assets are insured and safely stored until the repayment of the loan. <br /><br />
 
-Some understand the amazing potential of our TERM LOAN in which we will advance a minimum of $25,000 at a competitive monthly interest secured against your assets. <br /><br />
+Need slightly longer financing; our TERM LOAN will advance a minimum of $2,500 at a competitive monthly interest secured by nothing other than the value of your assets. <br /><br />
 
-All of our assets backed lending platforms are fast, simple, and competitive but most of all discreet. <br /><br />
+All of our assets backed lending platforms are fast, simple, competitive, and most of all discreet. <br /><br />
 
-Traditional banks cannot offer you what eLending does.  We transfer funds quickly and protect your assets the same way a museum or auction house does.
+Traditional banks cannot offer you what eLending does because we are backed by private investors and secured by your asset. We transfer funds quickly and protect your assets the same way a museum or auction house would.
 </p>
 <div class="center"><h2>Getting Started (Our Proocess):</h2></div>
+<div class="row process-row">
+  <div class="col-sm-4">
+    <h3 class="center">Step 1</h3>
+    <p>Click on the asset you wish to lend on and fill our quick prequalification form or call us today for a free consultation.</p>
+  </div>
+  <div class="col-sm-4">
+    <h3 class="center">Step 2</h3>
+    <p>Our experienced appraisers will help you understand the value of your asset.</p>
+  </div>
+  <div class="col-sm-4">
+    <h3 class="center">Step 3</h3>
+    <p>Once your asset has been inspected, insured, and secured you will receive funding instantly and begin to maximize the value of your assets with complete discretion.</p>
+  </div>
+</div>
 <p>Getting started is really simple. <br /><br />
 
 
@@ -166,6 +182,17 @@ Once the assets are in our possession we initiate funding
     <script src="js/jquery.nicefileinput.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
+      $(".decrease-size").hide();
+      $(".increase-size").click(function(){
+          $(this).hide();
+          $(".decrease-size").show();
+          $("body").addClass("big-font");
+      });
+      $(".decrease-size").click(function(){
+        $(this).hide();
+        $(".increase-size").show();
+        $("body").removeClass("big-font");
+      });
       $('select').niceSelect();
       $("input[type=file]").nicefileinput({
         label : '<img src="images/file-upload.png" />' // Spanish label

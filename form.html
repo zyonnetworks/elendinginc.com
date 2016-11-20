@@ -32,7 +32,7 @@
     </div>-->
     <header>
       <div class="container">
-        <a href="#" class="logo">eLending Capital</a>
+        <a href="index.html" class="logo">eLending Capital</a>
         <div class="pull-right">
           <div class="contact-box">
             <span class="circle-icon"><span class="ion-ios-telephone"></span></span>
@@ -51,6 +51,8 @@
             <li><a href="#"><span class="socicon-googleplus"></span></a></li>
           </ul>
         </div>
+        <a href="#" class="font-change increase-size">+</a>
+        <a href="#" class="font-change decrease-size">-</a>
       </div>
     </header>
     <div class="main-content">
@@ -88,6 +90,18 @@
               <label>UPLOAD PHOTOGRAPHS (AT LEAST 3 PHOTOS OF 3 DIFFERENT ANGLES)
                 <input type="file" id="photos" name="photos" class="nice" onchange="previewFiles()" multiple />
               </label>
+              <label>TYPE OF LOAN
+                <div class="radio-box">
+                  <input type="radio" name="loanType" id="type1" value="true" class="css-checkbox" checked>
+                  <label for="type1" class="css-label radGroup1">Bridge Loan</label>
+
+                  <input type="radio" name="loanType" id="type2" value="false" class="css-checkbox">
+                  <label for="type2" class="css-label radGroup1">Sales Advance</label>
+
+                  <input type="radio" name="loanType" id="type3" value="false" class="css-checkbox">
+                  <label for="type3" class="css-label radGroup1">Term Loan</label>
+                </div>
+              </label>
 
               <div id="preview"></div>
             </div>
@@ -112,10 +126,10 @@
               <label>ORIGINAL PACKAGING AVAILABLE
                 <div class="radio-box">
                   <input type="radio" name="originalPackaging" id="originalPackaging" value="true" class="css-checkbox" checked>
-                  <label for="radio1" class="css-label radGroup1">YES</label>
+                  <label for="originalPackaging" class="css-label radGroup1">YES</label>
 
-                  <input type="radio" name="originalPackaging" id="originalPackaging" value="false" class="css-checkbox">
-                  <label for="radio2" class="css-label radGroup1">NO</label>
+                  <input type="radio" name="originalPackaging" id="originalPackaging2" value="false" class="css-checkbox">
+                  <label for="originalPackaging2" class="css-label radGroup1">NO</label>
                 </div>
               </label>
 
@@ -239,6 +253,17 @@
     }
 
     $(document).ready(function() {
+      $(".decrease-size").hide();
+      $(".increase-size").click(function(){
+          $(this).hide();
+          $(".decrease-size").show();
+          $("body").addClass("big-font");
+      });
+      $(".decrease-size").click(function(){
+        $(this).hide();
+        $(".increase-size").show();
+        $("body").removeClass("big-font");
+      });
       $('select').niceSelect();
       $("input[type=file]").nicefileinput({
         label : '<img src="images/file-upload.png" />' // Spanish label

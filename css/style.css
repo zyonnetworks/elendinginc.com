@@ -122,7 +122,7 @@ header {
 }
 
 .social-media-top {
-  margin-top:45px;
+  margin-top:35px;
 }
 
 .social-media-top li {
@@ -676,13 +676,30 @@ label.css-label {
 .category-box {
   float:left;
   width:100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(images/8.jpg);
   border:12px solid #f4f7fb;
   border-bottom:50px solid #f4f7fb;
   margin-top:30px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.category-box img {
+  opacity:.5;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.category-box:hover img {
+  opacity:1;
+}
+
+.category-box:hover {
+  border: 12px solid #2e363a;
+  border-bottom: 50px solid #2e363a;
 }
 
 .category-box .slide-title {
@@ -691,6 +708,10 @@ label.css-label {
   padding:0;
   left:0;
   color:#2e363a;
+}
+
+.category-box:hover .slide-title {
+  color:#FFFFFF;
 }
 
 .capitalized {
@@ -711,6 +732,159 @@ label.css-label {
 
 footer p, footer a {
   font-size:15px;
+}
+
+.font-change {
+  float:right;
+  font-size:18px;
+  font-weight:700;
+  font-family: 'Nexa';
+  position:relative;
+  margin-left:20px;
+  padding-top:5px;
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:18px;
+  background:#f4f4f4;
+  color:#696969 !important;
+  margin-top:-10px;
+  border-radius:50%;
+}
+
+.decrease-size {
+  margin-top:-20px;
+}
+
+.process-row {
+  margin:30px 0;
+  padding-bottom:50px;
+  border-bottom:1px solid #f4f7fb;
+}
+
+.process-row h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3e467b;
+  line-height: 36px;
+  margin-bottom:20px;
+}
+
+.process-row p {
+  font-size:16px;
+  line-height:26px;
+  padding:0 20px;
+}
+
+.subpage h2 {
+  text-transform:none;
+}
+
+.subpage .process-row {
+  margin:0 0 20px 0;
+  padding-bottom:20px;
+  border:none;
+}
+
+body.big-font .contact-box p {
+  font-size:20px;
+  margin-top:0px;
+  line-height:22px;
+}
+
+body.big-font .contact-box p span {
+  display:block;
+}
+
+body.big-font .contact-box p.small-text {
+  font-size:16px !important;
+}
+
+body.big-font .contact-box:after {
+  margin-top:-60px;
+}
+
+body.big-font .menu ul li a {
+  font-size:17px;
+}
+
+body.big-font .consultation-button {
+  font-size:17px;
+}
+
+body.big-font h1 {
+  font-size:46px;
+}
+
+body.big-font h2 {
+  font-size:38px;
+}
+
+body.big-font h3 {
+  font-size:30px;
+}
+
+body.big-font p {
+  font-size:18px;
+}
+
+body.big-font .offer-box p {
+  font-size:18px;
+}
+
+body.big-font .offer-box {
+  min-height:420px;
+}
+
+body.big-font .offer-box .button {
+  margin-left:-68px;
+  font-size:18px;
+}
+
+body.big-font .icon-row p {
+  font-size:36px;
+}
+
+body.big-font .category-box .slide-title {
+  font-size:24px;
+  line-height:27px;
+  bottom:20px;
+}
+
+body.big-font .category-box {
+  border-bottom-width:65px;
+}
+
+body.big-font #accepted-assets div:nth-child(3) .slide-title {
+  bottom:5px !important;
+}
+
+body.big-font footer a {
+  font-size:18px;
+}
+
+body.big-font .subpage-header h1 {
+  font-size:56px;
+}
+
+body.big-font .blog-post a {
+  font-size:38px;
+}
+
+body.big-font label {
+  font-size:18px;
+}
+
+body.big-font button[type="submit"] {
+  font-size:22px;
+}
+
+body.big-font .subpage-header {
+  margin-top:-39px;
+}
+
+#formLead .col-sm-offset-1 label:nth-child(5) {
+  margin-top:16px;
 }
 
 @media (min-width: 1200px) {
@@ -741,6 +915,9 @@ footer p, footer a {
 
   .contact-box:after {
     display:none;
+  }
+  #accepted-assets div:nth-child(3) .slide-title {
+    bottom:0px !important;
   }
 }
 

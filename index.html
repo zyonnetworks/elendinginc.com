@@ -36,11 +36,11 @@
     </div>-->
     <header>
       <div class="container">
-        <a href="#" class="logo">eLending Capital</a>
+        <a href="index.html" class="logo">eLending Capital</a>
         <div class="pull-right">
           <div class="contact-box">
             <span class="circle-icon"><span class="ion-ios-telephone"></span></span>
-            <p>858-34LOANS (858-345-6267)</p>
+            <p>858-34LOANS <span>(858-345-6267)</span></p>
             <p class="small-text">elendingcapital@gmail.com</p>
           </div>
           <div class="contact-box">
@@ -55,6 +55,8 @@
             <li><a href="#"><span class="socicon-googleplus"></span></a></li>
           </ul>
         </div>
+        <a href="#" class="font-change increase-size">+</a>
+        <a href="#" class="font-change decrease-size">-</a>
       </div>
     </header>
     <div class="main-content">
@@ -75,49 +77,49 @@
           <h2>Assets we accept</h2>
         </div>
         <div id="accepted-assets" class="categories-mobile">
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/5.jpg" class="img-responsive" alt="JEWELRY" />
               <span class="slide-title">JEWELRY</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/7.jpg" class="img-responsive" alt="WATCHES" />
               <span class="slide-title">WATCHES</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/6.jpg" class="img-responsive" alt="GOLD & PRECIOUS METALS" />
               <span class="slide-title">GOLD & PRECIOUS METALS</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/3.jpg" class="img-responsive" alt="SELECT AUTOS" />
               <span class="slide-title">SELECT AUTOS</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/1.jpg" class="img-responsive" alt="ART & COLLECTIBLES" />
               <span class="slide-title">ART & COLLECTIBLES</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="http://ecapitalinc.com" class="category-box">
               <img src="images/2.jpg" class="img-responsive" alt="REAL ESTATE" />
               <span class="slide-title">REAL ESTATE</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/4.jpg" class="img-responsive" alt="HIGH END PURSES" />
               <span class="slide-title">HIGH END PURSES</span>
             </a>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-md-3 col-sm-6">
             <a href="form.html" class="category-box">
               <img src="images/8.jpg" class="img-responsive" alt="ANTIQUES" />
               <span class="slide-title">ANTIQUES</span>
@@ -162,6 +164,24 @@
       </div>
       <div class="container">
         <div class="center">
+          <h2>Our Process</h2>
+          <h3>How our process works - step by step</h3>
+        </div>
+        <div class="row process-row">
+          <div class="col-sm-4">
+            <h3 class="center">Step 1</h3>
+            <p>Click on the asset you wish to lend on and fill our quick prequalification form or call us today for a free consultation.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3 class="center">Step 2</h3>
+            <p>Our experienced appraisers will help you understand the value of your asset.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3 class="center">Step 3</h3>
+            <p>Once your asset has been inspected, insured, and secured you will receive funding instantly and begin to maximize the value of your assets with complete discretion.</p>
+          </div>
+        </div>
+        <div class="center">
           <h2>Why people choose us</h2>
           <h3>We offer a totally new way of borrowing</h3>
         </center>
@@ -201,12 +221,14 @@
         <div class="col-sm-3">
           <h3>Assets We Accept</h3>
           <ul>
-            <li><a href="#">Jewelry & Diamonds</a></li>
-            <li><a href="#">Luxury Watches</a></li>
-            <li><a href="#">Fine Arts & Antiques</a></li>
-            <li><a href="#">Luxury Cars</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Watches</a></li>
             <li><a href="#">Gold & Precious Metals</a></li>
-            <li><a href="#">Luxury Handbags</a></li>
+            <li><a href="#">Select Autos</a></li>
+            <li><a href="#">Art & Collectible</a></li>
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">High End Purse</a></li>
+            <li><a href="#">Antiques</a></li>
           </ul>
         </div>
         <div class="col-sm-3">
@@ -304,10 +326,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nicefileinput.min.js"></script>
     <script src="js/theta-carousel.min.js"></script>
-    <script src="js/example.js"></script>
     <script src="js/jquery.nicefileinput.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
+      $(".decrease-size").hide();
+      $(".increase-size").click(function(){
+          $(this).hide();
+          $(".decrease-size").show();
+          $("body").addClass("big-font");
+      });
+      $(".decrease-size").click(function(){
+        $(this).hide();
+        $(".increase-size").show();
+        $("body").removeClass("big-font");
+      });
       $('select').niceSelect();
       $("input[type=file]").nicefileinput({
         label : '<img src="images/file-upload.png" />' // Spanish label
