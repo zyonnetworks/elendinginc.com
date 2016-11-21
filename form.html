@@ -96,13 +96,13 @@
               </label>
               <label>TYPE OF LOAN
                 <div class="radio-box">
-                  <input type="radio" name="loanType" id="type1" value="true" class="css-checkbox" checked>
+                  <input type="radio" name="loanType" id="type1" value="Bridge Loan" class="css-checkbox" checked>
                   <label for="type1" class="css-label radGroup1">Bridge Loan</label>
 
-                  <input type="radio" name="loanType" id="type2" value="false" class="css-checkbox">
+                  <input type="radio" name="loanType" id="type2" value="Sales Advance" class="css-checkbox">
                   <label for="type2" class="css-label radGroup1">Sales Advance</label>
 
-                  <input type="radio" name="loanType" id="type3" value="false" class="css-checkbox">
+                  <input type="radio" name="loanType" id="type3" value="Term Loan" class="css-checkbox">
                   <label for="type3" class="css-label radGroup1">Term Loan</label>
                 </div>
               </label>
@@ -293,6 +293,8 @@
           if(typeof nameArray[1] !== "undefined") dataString.lastName = nameArray[1];
           else dataString.lastName = nameArray[0];
           dataString.phone = dataString.phone.replace(/-/g, '').replace(/\(|\)/g, '').replace(/ /g, '');
+          dataString.requestedLoanAmount = dataString.requestedLoanAmount.replace(/,/g, '');
+          dataString.requestedLoanAmount = dataString.requestedLoanAmount.replace(/,/g, '');
           dataString.requestedLoanAmount = dataString.requestedLoanAmount.replace(/,/g, '');
 
           console.log(dataString);
