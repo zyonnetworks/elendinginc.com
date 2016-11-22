@@ -640,10 +640,10 @@ label.css-label {
   font-size:16px;
 }
 
-.blog-post a {
+.blog-post a, .blog-post h2 {
   color: #2e363a;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
   font-weight: 700;
   border-left: 6px solid #cddc39;
   width: auto;
@@ -680,13 +680,16 @@ label.css-label {
 .category-box {
   float:left;
   width:100%;
-  border:12px solid #f4f7fb;
-  border-bottom:50px solid #f4f7fb;
+  background:#f4f7fb;
+  padding:12px 12px 50px 12px;
+  /* border:12px solid #f4f7fb;
+  border-bottom:50px solid #f4f7fb; */
   margin-top:30px;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  position:relative;
 }
 
 .category-box img {
@@ -702,8 +705,9 @@ label.css-label {
 }
 
 .category-box:hover {
-  border: 12px solid #2e363a;
-  border-bottom: 50px solid #2e363a;
+  background:#2e363a;
+  /* border: 12px solid #2e363a;
+  border-bottom: 50px solid #2e363a; */
 }
 
 .category-box .slide-title {
@@ -871,7 +875,7 @@ body.big-font .subpage-header h1 {
   font-size:56px;
 }
 
-body.big-font .blog-post a {
+body.big-font .blog-post a, body.big-font .blog-post h2 {
   font-size:38px;
 }
 
@@ -1046,6 +1050,9 @@ body.big-font .subpage-header {
   .top-bar ul li {
     float:none;
     display:inline-block;
+  }
+  .category-box img {
+    opacity:1;
   }
 }
 
