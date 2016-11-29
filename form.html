@@ -116,7 +116,13 @@
                                     <label for="assetCondition2" class="css-label radGroup1">EXCELLENT</label>
 
                                     <input type="radio" name="assetCondition" id="assetCondition3" value="No" class="css-checkbox">
-                                    <label for="assetCondition3" class="css-label radGroup1">AVERAGE BELOW AVERAGE POOR</label>
+                                    <label for="assetCondition3" class="css-label radGroup1">AVERAGE</label>
+
+                                    <input type="radio" name="assetCondition" id="assetCondition4" value="No" class="css-checkbox">
+                                    <label for="assetCondition4" class="css-label radGroup1">BELOW AVERAGE</label>
+
+                                    <input type="radio" name="assetCondition" id="assetCondition5" value="No" class="css-checkbox">
+                                    <label for="assetCondition5" class="css-label radGroup1">POOR</label>
                                 </div>
                             </label>
                             <label>AMOUNT YOU WISH TO BORROW:
@@ -159,7 +165,7 @@
                             </select>
 
                             <label>ESTIMATED VALUE
-                                <input type="text" name="assetCondition" id="assetCondition" />
+                                <input type="text" name="estimatedValue" id="estimatedValue" />
                             </label>
 
                             <label>ORIGINAL PACKAGING AVAILABLE
@@ -350,6 +356,10 @@
                 $('#requestedLoanAmount').mask('000,000,000,000,000', {
                     reverse: true
                 });
+                $('#estimatedValue').mask('000,000,000,000,000', {
+                    reverse: true
+                });
+
                 $('#phone').mask('(000) 000-0000', {
                     placeholder: "(___) ___-____"
                 });
