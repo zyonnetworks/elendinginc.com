@@ -109,19 +109,19 @@
                             </label>
                             <label>ASSET CONDITION
                                 <div class="radio-box">
-                                    <input type="radio" name="assetCondition" id="assetCondition1" value="Yes" class="css-checkbox" checked>
+                                    <input type="radio" name="assetCondition" id="assetCondition1" value="Mint" class="css-checkbox" checked>
                                     <label for="assetCondition1" class="css-label radGroup1">MINT</label>
 
-                                    <input type="radio" name="assetCondition" id="assetCondition2" value="No" class="css-checkbox">
+                                    <input type="radio" name="assetCondition" id="assetCondition2" value="Excellent" class="css-checkbox">
                                     <label for="assetCondition2" class="css-label radGroup1">EXCELLENT</label>
 
-                                    <input type="radio" name="assetCondition" id="assetCondition3" value="No" class="css-checkbox">
+                                    <input type="radio" name="assetCondition" id="assetCondition3" value="Average" class="css-checkbox">
                                     <label for="assetCondition3" class="css-label radGroup1">AVERAGE</label>
 
-                                    <input type="radio" name="assetCondition" id="assetCondition4" value="No" class="css-checkbox">
+                                    <input type="radio" name="assetCondition" id="assetCondition4" value="Below Average" class="css-checkbox">
                                     <label for="assetCondition4" class="css-label radGroup1">BELOW AVERAGE</label>
 
-                                    <input type="radio" name="assetCondition" id="assetCondition5" value="No" class="css-checkbox">
+                                    <input type="radio" name="assetCondition" id="assetCondition5" value="Poor" class="css-checkbox">
                                     <label for="assetCondition5" class="css-label radGroup1">POOR</label>
                                 </div>
                             </label>
@@ -153,7 +153,7 @@
                             </label>
 
                             <label>SELECT:</label>
-                            <select name="whatIsThisLoanFor">
+                            <select name="whatIsThisLoanFor" id="whatIsThisLoanFor">
                                 <option value="Jewelry">Jewelry</option>
                                 <option value="Watches">Watches</option>
                                 <option value="Gold & Precious Metals">Gold & Precious Metals</option>
@@ -393,18 +393,18 @@
 
                     var postUrl = "http://crm-staging.elendinginc.com/methods/createLead";
                     //var postUrl = "http://localhost:3000/methods/createLead";
-
-                    $.ajax({
-                        method: "post",
-                        url: postUrl,
-                        data: JSON.stringify(dataString),
-                        contentType: "application/json",
-                        success: function(data) {
-                            console.log(data); // 6
-                            location.href = '/thank-you.html';
-                            //alert('Your information has been forwarded to our agent. Someone will be in contact with you as soon as possible.');
-                        }
-                    });
+                    /*
+                                        $.ajax({
+                                            method: "post",
+                                            url: postUrl,
+                                            data: JSON.stringify(dataString),
+                                            contentType: "application/json",
+                                            success: function(data) {
+                                                console.log(data); // 6
+                                                location.href = '/thank-you.html';
+                                                //alert('Your information has been forwarded to our agent. Someone will be in contact with you as soon as possible.');
+                                            }
+                                        });*/
                 });
             });
         </script>
