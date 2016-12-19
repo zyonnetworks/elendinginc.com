@@ -145,6 +145,7 @@
                             </label>
 
                             <div id="preview"></div>
+                            <div id="preview-message">*Click on an image to remove</div>
                         </div>
 
                         <div class="col-sm-5">
@@ -165,7 +166,7 @@
                             </select>
 
                             <label>ESTIMATED VALUE
-                                <input type="text" name="estimatedValue" id="estimatedValue" />
+                                <input type="text" name="assetEstimatedValue" id="assetEstimatedValue" />
                             </label>
 
                             <label>ORIGINAL PACKAGING AVAILABLE
@@ -187,7 +188,7 @@
                             </label>
                         </div>
                         <div class="col-sm-12 center">
-                            <button type="submit">APPLY NOW</button>
+                            <button type="submit" id="apply-now-button">APPLY NOW</button>
                         </div>
                     </div>
                 </form>
@@ -292,6 +293,21 @@
         <script src="js/jquery.nicefileinput.min.js"></script>
         <script src="js/jquery.mask.js"></script>
         <script type="text/javascript">
+            function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            }
+
             function getFormData($form) {
                 var unindexed_array = $form.serializeArray();
                 var indexed_array = {};
@@ -315,14 +331,34 @@
                         var reader = new FileReader();
 
                         reader.addEventListener("load", function() {
+                            var currentData = $("body").data("images");
+                            var totalImages = currentData.length;
                             var image = new Image();
                             image.height = 100;
                             image.title = file.name;
                             image.src = this.result;
-                            var currentData = $("body").data("images");
+                            var src = this.result;
+                            image.id = "uploaded-" + totalImages;
+                            image.onclick = function() {
+                                var newArray = [];
+                                var currentData = ($("body").data("images"));
+                                currentData.forEach(function(element) {
+                                    if (element != src) {
+                                        newArray.push(src);
+                                    } else {
+                                        $("#uploaded-" + totalImages).hide();
+                                    }
+                                });
+                                $("body").data("images", newArray);
+                                if (newArray.length < 1) {
+                                    $('#preview-message').hide();
+                                }
+                            }
+
                             currentData.push(this.result);
                             $("body").data("images", currentData);
                             preview.appendChild(image);
+                            $('#preview-message').show();
                         }, false);
 
                         reader.readAsDataURL(file);
@@ -336,6 +372,12 @@
             }
 
             $(document).ready(function() {
+                $('#preview-message').hide();
+                if (getUrlParameter('type')) {
+                    $('#whatIsThisLoanFor').val(getUrlParameter('type'));
+                    $('select').niceSelect('update');
+                }
+
                 $(".decrease-size").hide();
                 $(".increase-size").click(function() {
                     $(this).hide();
@@ -356,7 +398,7 @@
                 $('#requestedLoanAmount').mask('000,000,000,000,000', {
                     reverse: true
                 });
-                $('#estimatedValue').mask('000,000,000,000,000', {
+                $('#assetEstimatedValue').mask('000,000,000,000,000', {
                     reverse: true
                 });
 
@@ -381,11 +423,14 @@
                     else dataString.lastName = nameArray[0];
                     dataString.phone = dataString.phone.replace(/-/g, '').replace(/\(|\)/g, '').replace(/ /g, '');
                     dataString.requestedLoanAmount = dataString.requestedLoanAmount.replace(/,/g, '');
+                    dataString.assetEstimatedValue = dataString.assetEstimatedValue.replace(/,/g, '');
 
                     console.log(dataString);
 
                     if (dataString.firstName && dataString.phone && dataString.email) {
                         console.log('all set');
+                        $('#apply-now-button').text('Processing... Please wait.');
+                        $('#apply-now-button').prop('disabled', true);
                     } else {
                         alert('Please fill in all required fields.');
                         return false;
@@ -403,6 +448,11 @@
                             console.log(data); // 6
                             location.href = '/thank-you.html';
                             //alert('Your information has been forwarded to our agent. Someone will be in contact with you as soon as possible.');
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            console.log(errorThrown);
+                            $('#apply-now-button').text('APPLY NOW');
+                            $('#apply-now-button').prop('disabled', false);
                         }
                     });
                 });
@@ -411,3 +461,4 @@
 </body>
 
 </html>
+tml>
