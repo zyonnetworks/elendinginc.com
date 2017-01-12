@@ -374,7 +374,14 @@
             $(document).ready(function() {
                 $('#preview-message').hide();
                 if (getUrlParameter('type')) {
-                    $('#whatIsThisLoanFor').val(getUrlParameter('type'));
+                    if(getUrlParameter('type') == "Art "){
+                      $('#whatIsThisLoanFor').val("Art & Collectibles");
+                    } else if(getUrlParameter('type') == "Gold "){
+                      $('#whatIsThisLoanFor').val("Gold & Precious Metals");
+                    }
+                    else {
+                      $('#whatIsThisLoanFor').val(getUrlParameter('type'));
+                    }
                     $('select').niceSelect('update');
                 }
 
