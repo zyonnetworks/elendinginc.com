@@ -223,6 +223,7 @@ header {
 .menu ul li {
   float:left;
   margin:0 35px;
+  position:relative;
 }
 
 .menu ul li:after {
@@ -233,6 +234,8 @@ header {
   position:absolute;
   height:20px;
   width:1px;
+  right:-40px;
+  top:0;
   content:' ';
   margin-left:40px;
 }
